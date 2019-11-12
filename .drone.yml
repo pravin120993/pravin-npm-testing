@@ -1,12 +1,15 @@
 
-pipeline:
-  npm-publish:
-    when: 
-      branch: master
-      event: push
-    image: plugins/npm
-    settings:
-      username: pravinit2
-      password:
-        from_secret: npm_password
-      email: pravinit2@gmail.com
+kind: pipeline
+name: default
+
+steps:
+- name: npm-publish
+  when: 
+    branch: master
+    event: push
+  image: plugins/npm
+  settings:
+    username: pravinit2
+    password:
+      from_secret: npm_password
+    email: pravinit2@gmail.com
