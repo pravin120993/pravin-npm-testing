@@ -1,0 +1,12 @@
+
+pipeline:
+  npm-publish:
+    when: 
+      branch: master
+      event: push
+    image: plugins/docker
+    settings:
+    username: pravinit2
+    password:
+      from_secret: npm_password
+    email: pravinit2@gmail.com
