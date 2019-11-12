@@ -4,9 +4,9 @@ pipeline:
     when: 
       branch: master
       event: push
-    image: plugins/docker
+    image: plugins/npm
     settings:
-    username: pravinit2
-    password:
-      from_secret: npm_password
-    email: pravinit2@gmail.com
+      username: pravinit2
+      password:
+        from_secret: npm_password
+      email: pravinit2@gmail.com
